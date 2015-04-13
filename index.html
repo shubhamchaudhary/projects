@@ -52,29 +52,7 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-    <script type="text/javascript">
-      var projects = {
-        "universal": "",
-        "logmein": "",
-        "logmein-android": "https://github.com/DevelopFreedom/logmein-android",
-        "CCDroid": "https://github.com/CCDroid/CCDroid",
-        "Pulla": "",
-        "GistIt": "https://github.com/shubhamchaudhary/GistIt"
-      };
-      projectList = "<ul>";
-      for (key in projects) {
-        projectList += "<li>";
-        projectList += key;
-        if ((projects[key] !== undefined) && (projects[key] !== null) && (projects[key] !== "")) {
-          projectList += " - "
-          projectList += "<a href=" + projects[key] + "  target=\"_blank\">Source</a>";
-        }
-        projectList += "</li>";
-      }
-      projectList += "</ul>";
-      var div = document.getElementById('project_list');
-      div.innerHTML = div.innerHTML + projectList;
-    </script>
+    <script src="javascripts/projects.js"></script>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
