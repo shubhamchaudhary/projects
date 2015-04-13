@@ -44,9 +44,6 @@
 
         <div class="project_list" id="project_list">
           <ul>
-            <li>universal</li>
-            <li>logmein</li>
-            <li>logmein-android - transferred to Develop Freedom (<a href="https://github.com/DevelopFreedom" class="user-mention">@DevelopFreedom</a>)</li>
           </ul>
         </div>
       </section>
@@ -55,6 +52,29 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
+    <script type="text/javascript">
+      var projects = {
+        "universal": "",
+        "logmein": "",
+        "logmein-android": "https://github.com/DevelopFreedom/logmein-android",
+        "CCDroid": "https://github.com/CCDroid/CCDroid",
+        "Pulla": "",
+        "GistIt": "https://github.com/shubhamchaudhary/GistIt"
+      };
+      projectList = "<ul>";
+      for (key in projects) {
+        projectList += "<li>";
+        projectList += key;
+        if ((projects[key] !== undefined) && (projects[key] !== null) && (projects[key] !== "")) {
+          projectList += " - "
+          projectList += "<a href=" + projects[key] + ">Source</a>";
+        }
+        projectList += "</li>";
+      }
+      projectList += "</ul>";
+      var div = document.getElementById('project_list');
+      div.innerHTML = div.innerHTML + projectList;
+    </script>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
